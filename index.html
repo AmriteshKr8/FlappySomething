@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy....</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="start-screen">
+      <h1>Flappy something</h1>
+
+      <div class="upload-section">
+        <h3>Idk you pick</h3>
+
+        <div class="input-group">
+          <label>Player Image:</label>
+          <input type="file" id="bird-upload" accept="image/*" />
+        </div>
+        <div class="input-group">
+          <label>Obstacle Image:</label>
+          <input type="file" id="pipe-upload" accept="image/*" />
+        </div>
+
+        <div class="input-group">
+          <label>BGM (Music):</label>
+          <input type="file" id="bgm-upload" accept="audio/*" />
+        </div>
+        <div class="input-group">
+          <label>Jump Sound:</label>
+          <input type="file" id="jump-upload" accept="audio/*" />
+        </div>
+        <div class="input-group">
+          <label>Game Over Sound:</label>
+          <input type="file" id="die-upload" accept="audio/*" />
+        </div>
+      </div>
+
+      <button id="start-btn" onclick="startGame()">START GAME</button>
+    </div>
+
+    <div id="game-container">
+      <div id="score">0</div>
+
+      <img id="player" src="" alt="" style="display: none" />
+      <div id="game-over-screen">
+        <h1>GAME OVER</h1>
+        <p>Score: <span id="final-score">0</span></p>
+        <button onclick="location.reload()">Play Again</button>
+      </div>
+    </div>
+  </body>
+</html>
